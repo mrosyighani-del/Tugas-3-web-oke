@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>SITTA UT — Tracking DO</title>
+  <link rel="stylesheet" href="Css/tracking.css" />
+</head>
+<body>
+  <header class="app-header">
+    <h1>Tracking Delivery Order</h1>
+    <nav class="tabs">
+      <a href="index.html">Dashboard</a>
+      <a href="stok-table.html">Stok</a>
+      <a href="order-form.html">Pemesanan</a>
+    </nav>
+  </header>
+
+  <div id="app">
+    <tracking-table :data="state.tracking" />
+  </div>
+
+  <!-- Script -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <script src="script/dataBahanAjar.js"></script>
+  <script src="script/tracking.js"></script>
+  <script>
+    new Vue({
+      el: '#app',
+      data: {
+        state: {
+          tracking: (dataBahanAjar.tracking || []).map(obj => {
+            const no = Object.keys(obj)[0];
+            const detail = obj[no];
+            return {
+              no,
+              nim: detail.nim,
+              nama: detail.nama,
+              status: detail.status,
+              ekspedisi: detail.ekspedisi,
+              tanggalKirim: detail.tanggalKirim,
+              paket: detail.paket,
+              total: detail.total,
+              perjalanan: detail.perjalanan || []
+            };
+          })
+        }
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+/* === Reset dasar === */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f4f6f9;
+  color: #333;
+}
+
+/* === Header Dashboard UT === */
+.app-header {
+  background: #003366; /* biru tua UT */
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  border-bottom: 4px solid #FFD700; /* kuning UT */
+}
+.app-header h1 { font-size: 22px; font-weight: bold; }
+.app-header img { height: 50px; }
+
+/* === Panel Order Form === */
+.order-panel {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 20px;
+  margin: 20px;
+}
+.order-panel h2 {
+  margin-bottom: 15px;
+  color: #003366;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* === Form Input === */
+.order-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+.order-form .full {
+  grid-column: 1 / -1;
+}
+.order-form label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  display: block;
+}
+.order-form input, .order-form select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #fff;
+}
+.order-form input:focus, .order-form select:focus {
+  border-color: #003366;
+  outline: none;
+  box-shadow: 0 0 4px rgba(0,51,102,0.3);
+}
+
+/* === Tombol Form === */
+.form-actions {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 10px;
+}
+.form-actions button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.form-actions .primary {
+  background: #003366;
+  color: #fff;
+}
+.form-actions .primary:hover {
+  background: #004080;
+}
+.form-actions .reset {
+  background: #FFD700;
+  color: #003366;
+}
+.form-actions .reset:hover {
+  background: #e6c200;
+}
+
+/* === Detail Paket === */
+.package-detail {
+  background: #f9f9f9;
+  border: 1px dashed #ccc;
+  border-radius: 6px;
+  padding: 10px;
+  font-size: 14px;
+  color: #555;
+}
+.package-detail strong {
+  color: #003366;
+}

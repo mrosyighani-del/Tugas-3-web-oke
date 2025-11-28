@@ -1,0 +1,125 @@
+/* === Reset dasar === */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f4f6f9;
+  color: #333;
+}
+
+/* === Header Dashboard UT === */
+.app-header {
+  background: #003366; /* biru tua UT */
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  border-bottom: 4px solid #FFD700; /* kuning UT */
+}
+.app-header h1 { font-size: 22px; font-weight: bold; }
+.app-header img { height: 50px; }
+
+/* === Panel Tracking DO === */
+.tracking-panel {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 20px;
+  margin: 20px;
+}
+.tracking-panel h2 {
+  margin-bottom: 15px;
+  color: #003366;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* === Filter & Pencarian === */
+.tracking-filters {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+.tracking-filters label {
+  font-weight: 600;
+  margin-right: 8px;
+}
+.tracking-filters input, .tracking-filters select {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* === Tabel Tracking DO === */
+.tracking-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.tracking-table th, .tracking-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+.tracking-table th {
+  background: #003366;
+  color: #fff;
+}
+.tracking-table tr:nth-child(even) {
+  background: #f9f9f9;
+}
+.tracking-table tr:hover {
+  background: #eef5ff;
+}
+
+/* === Status perjalanan === */
+.journey {
+  list-style: none;
+  padding-left: 0;
+}
+.journey li {
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+.journey span {
+  font-family: monospace;
+  color: #555;
+}
+
+/* === Form tambah perjalanan === */
+.journey-add {
+  margin-top: 8px;
+  display: flex;
+  gap: 8px;
+}
+.journey-add input {
+  flex: 1;
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+.journey-add button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  background: #0969da;
+  color: #fff;
+  cursor: pointer;
+}
+.journey-add button:hover {
+  background: #004080;
+}
+
+/* === Tombol aksi DO === */
+.actions button {
+  margin-right: 6px;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.actions .delete {
+  background: #cf222e;
+  color: #fff;
+}
+.actions .delete:hover { background: #a32020; }

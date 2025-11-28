@@ -1,0 +1,25 @@
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>SITTA UT — Pemesanan Bahan Ajar</title>
+  <link rel="stylesheet" href="Css/modal.css" />
+  
+</head>
+<body>
+  <div id="app">
+    <header class="app-header">
+      <h1>SITTA UT — Pemesanan & Tracking Bahan Ajar</h1>
+      <img src="img/logo UT.png" alt="Logo UT">
+
+    </header>
+
+<div class="modal" v-show="visible">
+  <div class="modal-body">
+    <h3>{{title}}</h3>
+    <p>{{message}}</p>
+    <div class="modal-actions">
+      <button class="confirm" @click="confirm">Ya, lanjut</button>
+      <button class="cancel" @click="cancel">Batal</button>
+    </div>
+  </div>
+</div>

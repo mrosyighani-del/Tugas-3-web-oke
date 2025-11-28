@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>SITTA UT — Pemesanan Bahan Ajar</title>
+  <link rel="stylesheet" href="Css/order.css" />
+</head>
+<body>
+  <header class="app-header">
+    <h1>Pemesanan Bahan Ajar</h1>
+    <nav class="tabs">
+      <a href="index.html">Dashboard</a>
+      <a href="stok-table.html">Stok</a>
+      <a href="do-tracking.html">Tracking DO</a>
+    </nav>
+  </header>
+
+  <div id="app">
+  <order-form :paket="state.paket" :ekspedisi="state.pengirimanList" />
+</div>
+
+  <!-- Script -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <script src="script/dataBahanAjar.js"></script>
+  <script src="script/order.js"></script>
+  <script>
+    new Vue({
+      el: '#app',
+      data: {
+        state: {
+          paket: dataBahanAjar.paket,
+          pengirimanList: dataBahanAjar.pengirimanList
+        }
+      }
+    });
+  </script>
+</body>
+</html>
